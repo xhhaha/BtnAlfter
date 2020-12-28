@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aflter</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex;margin-top: 20%;margin-left: auto;margin-right: auto;text-align: center;width: 1200px;">
+        <button class="up" style="height: 100px;width: 300px;">up</button>
+        <button class="down" style="height: 100px;width: 300px;">down</button>
+        <button class="left" style="height: 100px;width: 300px;">left</button>
+        <button class="right" style="height: 100px;width: 300px;" id="right" >right</button>
+    </div>
+    <div style="display: block;width:100%;margin: 0 auto;text-align: center;">
+        <a href="http://www.jiebainc.com">jiebainc </a>
+    </div>
+    <script src="BtnAfter.js"></script>
+    <script>
+        var up = new BtnAfter(".up");
+        up.run({
+            direction: "up", //方向  direction
+            color: "black" //color 颜色
+        });
+        var down = new BtnAfter(".down");
+        down.run({
+            direction: "down" //方向 direction
+        });
+        var left = new BtnAfter(".left");
+        left.run({
+            direction: "left"  //方向 direction
+        });
+        var right = new BtnAfter("#right");
+        right.run({
+            direction: "right",// 方向  direction
+            backcolor: "#1E1E1E",//背景颜色  backgroung-color
+            hoverbackcolor: "#333333" //经过的颜色  :hover background-color
+        });
+    </script>
+</body>
+</html>
